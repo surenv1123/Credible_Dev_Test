@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Credible_Dev_Test.Models.u_portal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div style="border-bottom: 1px solid #e5e5e5";>
+    <h1>Portal Information</h1>
+  
+</div>
+<div style="margin: 10px 10px 10px 10px">
+    <table id="portalviewTbl" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.portal_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.portal_nm)
+                </th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.portal_id)
+                    </td>
+                    <td>
+                        <a href="javascript:void(0);" onclick="courseDtl(@item.portal_id)" class="anchorDetail" data-id="@item.portal_id">@Html.DisplayFor(modelItem => item.portal_nm)</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div id='portalModal' class='modal'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='portalModalContent'></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#portalviewTbl').DataTable();
+    });
+
+    var TeamDetailPostBackURL = '/u_course_portal/Details';
+
+    function courseDtl(id) {
+
+        var options = {
+            "backdrop": "static", keyboard: true, "width": 600, "height": 600, "position": { my: "left top", at: "left bottom", of: window }
+        };
+        $.ajax({
+            type: "GET",
+            url: TeamDetailPostBackURL,
+            contentType: "application/json; charset=utf-8",
+            data: { "Id": id },
+            datatype: "json",
+            success: function (data) {
+
+                $('#portalModalContent').html(data);
+                $('#portalModal').modal(options);
+                $('#portalModal').modal('show');
+
+            },
+            error: function () {
+                alert("Course details load failed.");
+            }
+        });
+    }
+
+    $("#courseClose").click(function () {
+        $('#portalModal').modal('hide');
+    });
+
+
+</script>

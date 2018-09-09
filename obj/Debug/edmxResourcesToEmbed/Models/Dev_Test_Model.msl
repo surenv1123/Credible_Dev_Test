@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dev_testModelStoreContainer" CdmEntityContainer="dev_testEntities">
+    <EntitySetMapping Name="u_course_portal">
+      <EntityTypeMapping TypeName="dev_testModel.u_course_portal">
+        <MappingFragment StoreEntitySet="u_course_portal">
+          <ScalarProperty Name="course_portal_id" ColumnName="course_portal_id" />
+          <ScalarProperty Name="portal_id" ColumnName="portal_id" />
+          <ScalarProperty Name="course_variant_id" ColumnName="course_variant_id" />
+          <ScalarProperty Name="credit_type_cd" ColumnName="credit_type_cd" />
+          <ScalarProperty Name="credit_type_nm" ColumnName="credit_type_nm" />
+          <ScalarProperty Name="earned_credit" ColumnName="earned_credit" />
+          <ScalarProperty Name="syllabus" ColumnName="syllabus" />
+          <ScalarProperty Name="syllabus_url" ColumnName="syllabus_url" />
+          <ScalarProperty Name="regular_px" ColumnName="regular_px" />
+          <ScalarProperty Name="sale_px" ColumnName="sale_px" />
+          <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+          <ScalarProperty Name="forum_ind" ColumnName="forum_ind" />
+          <ScalarProperty Name="classroom_sz" ColumnName="classroom_sz" />
+          <ScalarProperty Name="forum_posts_per_topic" ColumnName="forum_posts_per_topic" />
+          <ScalarProperty Name="display_start_dt" ColumnName="display_start_dt" />
+          <ScalarProperty Name="display_finish_dt" ColumnName="display_finish_dt" />
+          <ScalarProperty Name="purchase_start_dt" ColumnName="purchase_start_dt" />
+          <ScalarProperty Name="purchase_finish_dt" ColumnName="purchase_finish_dt" />
+          <ScalarProperty Name="access_start_dt" ColumnName="access_start_dt" />
+          <ScalarProperty Name="access_finish_dt" ColumnName="access_finish_dt" />
+          <ScalarProperty Name="access_day" ColumnName="access_day" />
+          <ScalarProperty Name="active_ind" ColumnName="active_ind" />
+          <ScalarProperty Name="created_dttm" ColumnName="created_dttm" />
+          <ScalarProperty Name="created_id" ColumnName="created_id" />
+          <ScalarProperty Name="modified_dttm" ColumnName="modified_dttm" />
+          <ScalarProperty Name="modified_id" ColumnName="modified_id" />
+          <ScalarProperty Name="grade_id" ColumnName="grade_id" />
+          <ScalarProperty Name="deployment_status" ColumnName="deployment_status" />
+          <ScalarProperty Name="reg_method" ColumnName="reg_method" />
+          <ScalarProperty Name="course_portal_nm" ColumnName="course_portal_nm" />
+          <ScalarProperty Name="self_reg_enabled_ind" ColumnName="self_reg_enabled_ind" />
+          <ScalarProperty Name="course_display_nm" ColumnName="course_display_nm" />
+          <ScalarProperty Name="course_display_img" ColumnName="course_display_img" />
+          <ScalarProperty Name="course_subject" ColumnName="course_subject" />
+          <ScalarProperty Name="course_topic" ColumnName="course_topic" />
+          <ScalarProperty Name="course_default_standard" ColumnName="course_default_standard" />
+          <ScalarProperty Name="credit_upgrade_ind" ColumnName="credit_upgrade_ind" />
+          <ScalarProperty Name="upgrade_price" ColumnName="upgrade_price" />
+          <ScalarProperty Name="upgrade_overview" ColumnName="upgrade_overview" />
+          <ScalarProperty Name="enable_evidence" ColumnName="enable_evidence" />
+          <ScalarProperty Name="credit_acceptance" ColumnName="credit_acceptance" />
+          <ScalarProperty Name="clustered_id" ColumnName="clustered_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="u_portal">
+      <EntityTypeMapping TypeName="dev_testModel.u_portal">
+        <MappingFragment StoreEntitySet="u_portal">
+          <ScalarProperty Name="portal_id" ColumnName="portal_id" />
+          <ScalarProperty Name="portal_nm" ColumnName="portal_nm" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="agency_id" ColumnName="agency_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="portal_type_id" ColumnName="portal_type_id" />
+          <ScalarProperty Name="marketing_partner_ind" ColumnName="marketing_partner_ind" />
+          <ScalarProperty Name="credit_grantor_ind" ColumnName="credit_grantor_ind" />
+          <ScalarProperty Name="other_credit_grantor_id" ColumnName="other_credit_grantor_id" />
+          <ScalarProperty Name="direct_buyer_ind" ColumnName="direct_buyer_ind" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="display_start_dt" ColumnName="display_start_dt" />
+          <ScalarProperty Name="display_finish_dt" ColumnName="display_finish_dt" />
+          <ScalarProperty Name="purchase_start_dt" ColumnName="purchase_start_dt" />
+          <ScalarProperty Name="purchase_finish_dt" ColumnName="purchase_finish_dt" />
+          <ScalarProperty Name="access_start_dt" ColumnName="access_start_dt" />
+          <ScalarProperty Name="access_finish_dt" ColumnName="access_finish_dt" />
+          <ScalarProperty Name="access_day" ColumnName="access_day" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="keyword" ColumnName="keyword" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="introduction" ColumnName="introduction" />
+          <ScalarProperty Name="promotion" ColumnName="promotion" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="completion" ColumnName="completion" />
+          <ScalarProperty Name="flyer_url" ColumnName="flyer_url" />
+          <ScalarProperty Name="logo_url" ColumnName="logo_url" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="active_ind" ColumnName="active_ind" />
+          <ScalarProperty Name="created_dttm" ColumnName="created_dttm" />
+          <ScalarProperty Name="created_id" ColumnName="created_id" />
+          <ScalarProperty Name="modified_dttm" ColumnName="modified_dttm" />
+          <ScalarProperty Name="modified_id" ColumnName="modified_id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="login_page_logo" ColumnName="login_page_logo" />
+          <ScalarProperty Name="login_page_text" ColumnName="login_page_text" />
+          <ScalarProperty Name="special_use" ColumnName="special_use" />
+          <ScalarProperty Name="self_reg_ind" ColumnName="self_reg_ind" />
+          <ScalarProperty Name="self_reg_limit_by_teacher" ColumnName="self_reg_limit_by_teacher" />
+          <ScalarProperty Name="eClassroom_logo" ColumnName="eClassroom_logo" />
+          <ScalarProperty Name="self_reg_teacher_course_limit" ColumnName="self_reg_teacher_course_limit" />
+          <ScalarProperty Name="chat_ind" ColumnName="chat_ind" />
+          <ScalarProperty Name="pwd_change_rqd_ind" ColumnName="pwd_change_rqd_ind" />
+          <ScalarProperty Name="review_mode_ind" ColumnName="review_mode_ind" />
+          <ScalarProperty Name="only_grade_complete_ind" ColumnName="only_grade_complete_ind" />
+          <ScalarProperty Name="clustered_id" ColumnName="clustered_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="u_registration">
+      <EntityTypeMapping TypeName="dev_testModel.u_registration">
+        <MappingFragment StoreEntitySet="u_registration">
+          <ScalarProperty Name="registration_id" ColumnName="registration_id" />
+          <ScalarProperty Name="order_detail_id" ColumnName="order_detail_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="course_portal_id" ColumnName="course_portal_id" />
+          <ScalarProperty Name="registration_dttm" ColumnName="registration_dttm" />
+          <ScalarProperty Name="registration_type_cd" ColumnName="registration_type_cd" />
+          <ScalarProperty Name="drop_out_dttm" ColumnName="drop_out_dttm" />
+          <ScalarProperty Name="access_start_dt" ColumnName="access_start_dt" />
+          <ScalarProperty Name="access_finish_dt" ColumnName="access_finish_dt" />
+          <ScalarProperty Name="active_ind" ColumnName="active_ind" />
+          <ScalarProperty Name="created_dttm" ColumnName="created_dttm" />
+          <ScalarProperty Name="created_id" ColumnName="created_id" />
+          <ScalarProperty Name="modified_dttm" ColumnName="modified_dttm" />
+          <ScalarProperty Name="modified_id" ColumnName="modified_id" />
+          <ScalarProperty Name="complete_dttm" ColumnName="complete_dttm" />
+          <ScalarProperty Name="final_grade" ColumnName="final_grade" />
+          <ScalarProperty Name="course_portal_self_reg_id" ColumnName="course_portal_self_reg_id" />
+          <ScalarProperty Name="credit_upgrade_ind" ColumnName="credit_upgrade_ind" />
+          <ScalarProperty Name="withdrawn_ind" ColumnName="withdrawn_ind" />
+          <ScalarProperty Name="grade_id" ColumnName="grade_id" />
+          <ScalarProperty Name="enrollment_status_id" ColumnName="enrollment_status_id" />
+          <ScalarProperty Name="last_activity_date" ColumnName="last_activity_date" />
+          <ScalarProperty Name="clustered_id" ColumnName="clustered_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="u_user">
+      <EntityTypeMapping TypeName="dev_testModel.u_user">
+        <MappingFragment StoreEntitySet="u_user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="company_nm" ColumnName="company_nm" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="first_nm" ColumnName="first_nm" />
+          <ScalarProperty Name="last_nm" ColumnName="last_nm" />
+          <ScalarProperty Name="phone1" ColumnName="phone1" />
+          <ScalarProperty Name="phone2" ColumnName="phone2" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="county_id" ColumnName="county_id" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="postal_cd" ColumnName="postal_cd" />
+          <ScalarProperty Name="sec_address1" ColumnName="sec_address1" />
+          <ScalarProperty Name="sec_address2" ColumnName="sec_address2" />
+          <ScalarProperty Name="sec_city" ColumnName="sec_city" />
+          <ScalarProperty Name="sec_state" ColumnName="sec_state" />
+          <ScalarProperty Name="sec_postal_cd" ColumnName="sec_postal_cd" />
+          <ScalarProperty Name="speaker_ind" ColumnName="speaker_ind" />
+          <ScalarProperty Name="marketing_partner_ind" ColumnName="marketing_partner_ind" />
+          <ScalarProperty Name="credit_grantor_ind" ColumnName="credit_grantor_ind" />
+          <ScalarProperty Name="direct_buyer_ind" ColumnName="direct_buyer_ind" />
+          <ScalarProperty Name="active_ind" ColumnName="active_ind" />
+          <ScalarProperty Name="created_dttm" ColumnName="created_dttm" />
+          <ScalarProperty Name="created_id" ColumnName="created_id" />
+          <ScalarProperty Name="modified_dttm" ColumnName="modified_dttm" />
+          <ScalarProperty Name="modified_id" ColumnName="modified_id" />
+          <ScalarProperty Name="notification_email_ind" ColumnName="notification_email_ind" />
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="grade_level_id" ColumnName="grade_level_id" />
+          <ScalarProperty Name="position_id" ColumnName="position_id" />
+          <ScalarProperty Name="temp_pwd_changed" ColumnName="temp_pwd_changed" />
+          <ScalarProperty Name="user_agreement_accept_dttm" ColumnName="user_agreement_accept_dttm" />
+          <ScalarProperty Name="district_employee_id" ColumnName="district_employee_id" />
+          <ScalarProperty Name="state_employee_id" ColumnName="state_employee_id" />
+          <ScalarProperty Name="group_nm" ColumnName="group_nm" />
+          <ScalarProperty Name="review_mode_ind" ColumnName="review_mode_ind" />
+          <ScalarProperty Name="chat_ind" ColumnName="chat_ind" />
+          <ScalarProperty Name="soc_sec_nmb" ColumnName="soc_sec_nmb" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
+          <ScalarProperty Name="thumbnail_url" ColumnName="thumbnail_url" />
+          <ScalarProperty Name="clustered_id" ColumnName="clustered_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Credible_Dev_Test.Models.RegisteredUserInfo>
+
+<div>
+
+    <div class="modal-header">
+        <button type="button" id="userClose" class="close" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">User Information</h4>
+    </div>
+    <div style="margin:20px 20px 20px 20px">
+        <table id="userviewTbl" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        User Id
+                    </th>
+                    <th>
+                        User First Name
+                    </th>
+
+                    <th>
+                        User Last name
+                    </th>
+                    <th>
+                        Registration Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.user_id);
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.first_nm);
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.last_nm);
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.registration_dttm);
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#userviewTbl').DataTable();
+    });
+
+    $("#userClose").click(function () {
+
+        $('#userModal').modal('hide');
+    });
+</script>

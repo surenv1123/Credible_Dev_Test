@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Credible_Dev_Test.Models.u_course_portal>
+
+<div>
+    <div class="modal-header" >
+        <button type="button"  id="courseClose"  class="close"  aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Course Information</h4>
+    </div>
+
+    <div style="margin:10px 10px 10px 10px">
+
+        <table id="courseviewTbl" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.course_portal_id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.course_portal_nm)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.course_portal_id)
+                    </td>
+
+                    <td>
+                        <a href="javascript:void(0);" class="userDetail" onclick="userDtl(@item.course_portal_id)"  data-id="@item.course_portal_id">@Html.DisplayFor(modelItem => item.course_portal_nm)</a>
+
+                    </td>
+
+                </tr>
+
+        }
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div id='userModal' class='modal '>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id='userModalContent'></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    #userModal {
+        width: 600px !important;
+        height: 500px !important;
+        position:fixed;
+        top: 200px;
+        overflow:unset;
+
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('#courseviewTbl').DataTable();
+    });
+    
+        var userDtlUrl = '/u_registration/Details';
+   
+        
+        function userDtl(id) {
+
+            
+            var options = { "backdrop": "static", keyboard: true, "width": 500, "height": 600, "position": { my: "left top", at: "left bottom", of: window } };
+            $.ajax({
+                type: "GET",
+                url: userDtlUrl,
+                contentType: "application/json; charset=utf-8",
+                data: { "Id": id },
+                datatype: "json",
+                success: function (data) {
+
+                    $('#userModalContent').html(data);
+                    $('#userModal').modal(options);
+                    $('#userModal').modal('show');
+
+                },
+                error: function () {
+                    alert("User Details load failed.");
+                }
+            });
+
+        }
+
+        $("#courseClose").click(function () {
+            $('#portalModal').modal('hide');
+        });
+
+  
+
+</script>

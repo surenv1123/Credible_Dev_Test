@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dev_testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="u_course_portal">
+    <Key>
+      <PropertyRef Name="course_portal_id" />
+    </Key>
+    <Property Name="course_portal_id" Type="Int32" Nullable="false" />
+    <Property Name="portal_id" Type="Int32" Nullable="false" />
+    <Property Name="course_variant_id" Type="Int32" Nullable="false" />
+    <Property Name="credit_type_cd" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="credit_type_nm" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="earned_credit" Type="Decimal" Precision="3" Scale="1" Nullable="false" />
+    <Property Name="syllabus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="syllabus_url" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="regular_px" Type="Decimal" Precision="13" Scale="4" Nullable="false" />
+    <Property Name="sale_px" Type="Decimal" Precision="13" Scale="4" />
+    <Property Name="sort_order" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="forum_ind" Type="Boolean" Nullable="false" />
+    <Property Name="classroom_sz" Type="Int32" Nullable="false" />
+    <Property Name="forum_posts_per_topic" Type="Int32" />
+    <Property Name="display_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="display_finish_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="purchase_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="purchase_finish_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="access_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="access_finish_dt" Type="DateTime" Precision="3" />
+    <Property Name="access_day" Type="Int32" />
+    <Property Name="active_ind" Type="Boolean" Nullable="false" />
+    <Property Name="created_dttm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_id" Type="Int32" Nullable="false" />
+    <Property Name="modified_dttm" Type="DateTime" Precision="3" />
+    <Property Name="modified_id" Type="Int32" />
+    <Property Name="grade_id" Type="Int32" Nullable="false" />
+    <Property Name="deployment_status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="reg_method" Type="Int32" />
+    <Property Name="course_portal_nm" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="self_reg_enabled_ind" Type="Boolean" Nullable="false" />
+    <Property Name="course_display_nm" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="course_display_img" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="course_subject" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="course_topic" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="course_default_standard" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="credit_upgrade_ind" Type="Boolean" />
+    <Property Name="upgrade_price" Type="Decimal" Precision="12" Scale="4" />
+    <Property Name="upgrade_overview" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="enable_evidence" Type="Boolean" Nullable="false" />
+    <Property Name="credit_acceptance" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="clustered_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="u_portal" Relationship="Self.FK_dbo_u_course_portal_dbo_u_portal_portal_id" FromRole="u_course_portal" ToRole="u_portal" />
+    <NavigationProperty Name="u_registration" Relationship="Self.FK_dbo_u_registration_dbo_u_course_portal_course_portal_id" FromRole="u_course_portal" ToRole="u_registration" />
+  </EntityType>
+  <EntityType Name="u_portal">
+    <Key>
+      <PropertyRef Name="portal_id" />
+    </Key>
+    <Property Name="portal_id" Type="Int32" Nullable="false" />
+    <Property Name="portal_nm" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="client_id" Type="Int32" />
+    <Property Name="state_id" Type="Int32" />
+    <Property Name="agency_id" Type="Int32" />
+    <Property Name="school_id" Type="Int32" />
+    <Property Name="portal_type_id" Type="Int32" Nullable="false" />
+    <Property Name="marketing_partner_ind" Type="Boolean" Nullable="false" />
+    <Property Name="credit_grantor_ind" Type="Boolean" Nullable="false" />
+    <Property Name="other_credit_grantor_id" Type="Int32" />
+    <Property Name="direct_buyer_ind" Type="Boolean" Nullable="false" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="display_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="display_finish_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="purchase_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="purchase_finish_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="access_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="access_finish_dt" Type="DateTime" Precision="3" />
+    <Property Name="access_day" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="keyword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="introduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="promotion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="completion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="flyer_url" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="logo_url" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="logo" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="contact_email" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="active_ind" Type="Boolean" Nullable="false" />
+    <Property Name="created_dttm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_id" Type="Int32" Nullable="false" />
+    <Property Name="modified_dttm" Type="DateTime" Precision="3" />
+    <Property Name="modified_id" Type="Int32" />
+    <Property Name="RoleId" Type="Guid" />
+    <Property Name="theme" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="login_page_logo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="login_page_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="special_use" Type="Boolean" />
+    <Property Name="self_reg_ind" Type="Boolean" Nullable="false" />
+    <Property Name="self_reg_limit_by_teacher" Type="Boolean" />
+    <Property Name="eClassroom_logo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="self_reg_teacher_course_limit" Type="Int32" />
+    <Property Name="chat_ind" Type="Boolean" Nullable="false" />
+    <Property Name="pwd_change_rqd_ind" Type="Boolean" Nullable="false" />
+    <Property Name="review_mode_ind" Type="Boolean" Nullable="false" />
+    <Property Name="only_grade_complete_ind" Type="Boolean" />
+    <Property Name="clustered_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="u_course_portal" Relationship="Self.FK_dbo_u_course_portal_dbo_u_portal_portal_id" FromRole="u_portal" ToRole="u_course_portal" />
+  </EntityType>
+  <EntityType Name="u_registration">
+    <Key>
+      <PropertyRef Name="registration_id" />
+    </Key>
+    <Property Name="registration_id" Type="Int32" Nullable="false" />
+    <Property Name="order_detail_id" Type="Int32" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="course_portal_id" Type="Int32" Nullable="false" />
+    <Property Name="registration_dttm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="registration_type_cd" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="drop_out_dttm" Type="DateTime" Precision="3" />
+    <Property Name="access_start_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="access_finish_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="active_ind" Type="Boolean" Nullable="false" />
+    <Property Name="created_dttm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_id" Type="Int32" Nullable="false" />
+    <Property Name="modified_dttm" Type="DateTime" Precision="3" />
+    <Property Name="modified_id" Type="Int32" />
+    <Property Name="complete_dttm" Type="DateTime" Precision="3" />
+    <Property Name="final_grade" Type="Decimal" Precision="12" Scale="4" />
+    <Property Name="course_portal_self_reg_id" Type="Int32" />
+    <Property Name="credit_upgrade_ind" Type="Boolean" />
+    <Property Name="withdrawn_ind" Type="Boolean" Nullable="false" />
+    <Property Name="grade_id" Type="Int32" />
+    <Property Name="enrollment_status_id" Type="Int32" Nullable="false" />
+    <Property Name="last_activity_date" Type="DateTime" Precision="3" />
+    <Property Name="clustered_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="u_course_portal" Relationship="Self.FK_dbo_u_registration_dbo_u_course_portal_course_portal_id" FromRole="u_registration" ToRole="u_course_portal" />
+    <NavigationProperty Name="u_user" Relationship="Self.FK_dbo_u_registration_dbo_u_user_user_id" FromRole="u_registration" ToRole="u_user" />
+  </EntityType>
+  <EntityType Name="u_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="client_id" Type="Int32" />
+    <Property Name="company_nm" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="first_nm" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="last_nm" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="phone1" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="phone2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="county_id" Type="Int32" />
+    <Property Name="state" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="postal_cd" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="sec_address1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="sec_address2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="sec_city" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="sec_state" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="sec_postal_cd" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="speaker_ind" Type="Boolean" Nullable="false" />
+    <Property Name="marketing_partner_ind" Type="Boolean" Nullable="false" />
+    <Property Name="credit_grantor_ind" Type="Boolean" Nullable="false" />
+    <Property Name="direct_buyer_ind" Type="Boolean" Nullable="false" />
+    <Property Name="active_ind" Type="Boolean" Nullable="false" />
+    <Property Name="created_dttm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_id" Type="Int32" Nullable="false" />
+    <Property Name="modified_dttm" Type="DateTime" Precision="3" />
+    <Property Name="modified_id" Type="Int32" />
+    <Property Name="notification_email_ind" Type="Boolean" Nullable="false" />
+    <Property Name="subject_id" Type="Int32" />
+    <Property Name="grade_level_id" Type="Int32" />
+    <Property Name="position_id" Type="Int32" />
+    <Property Name="temp_pwd_changed" Type="Boolean" Nullable="false" />
+    <Property Name="user_agreement_accept_dttm" Type="DateTime" Precision="3" />
+    <Property Name="district_employee_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state_employee_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="group_nm" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="review_mode_ind" Type="Boolean" Nullable="false" />
+    <Property Name="chat_ind" Type="Boolean" Nullable="false" />
+    <Property Name="soc_sec_nmb" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="3" />
+    <Property Name="avatar_url" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="thumbnail_url" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="clustered_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="u_registration" Relationship="Self.FK_dbo_u_registration_dbo_u_user_user_id" FromRole="u_user" ToRole="u_registration" />
+  </EntityType>
+  <Association Name="FK_dbo_u_course_portal_dbo_u_portal_portal_id">
+    <End Role="u_portal" Type="Self.u_portal" Multiplicity="1" />
+    <End Role="u_course_portal" Type="Self.u_course_portal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="u_portal">
+        <PropertyRef Name="portal_id" />
+      </Principal>
+      <Dependent Role="u_course_portal">
+        <PropertyRef Name="portal_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_u_registration_dbo_u_course_portal_course_portal_id">
+    <End Role="u_course_portal" Type="Self.u_course_portal" Multiplicity="1" />
+    <End Role="u_registration" Type="Self.u_registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="u_course_portal">
+        <PropertyRef Name="course_portal_id" />
+      </Principal>
+      <Dependent Role="u_registration">
+        <PropertyRef Name="course_portal_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_u_registration_dbo_u_user_user_id">
+    <End Role="u_user" Type="Self.u_user" Multiplicity="1" />
+    <End Role="u_registration" Type="Self.u_registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="u_user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="u_registration">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dev_testEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="u_course_portal" EntityType="Self.u_course_portal" />
+    <EntitySet Name="u_portal" EntityType="Self.u_portal" />
+    <EntitySet Name="u_registration" EntityType="Self.u_registration" />
+    <EntitySet Name="u_user" EntityType="Self.u_user" />
+    <AssociationSet Name="FK_dbo_u_course_portal_dbo_u_portal_portal_id" Association="Self.FK_dbo_u_course_portal_dbo_u_portal_portal_id">
+      <End Role="u_portal" EntitySet="u_portal" />
+      <End Role="u_course_portal" EntitySet="u_course_portal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_u_registration_dbo_u_course_portal_course_portal_id" Association="Self.FK_dbo_u_registration_dbo_u_course_portal_course_portal_id">
+      <End Role="u_course_portal" EntitySet="u_course_portal" />
+      <End Role="u_registration" EntitySet="u_registration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_u_registration_dbo_u_user_user_id" Association="Self.FK_dbo_u_registration_dbo_u_user_user_id">
+      <End Role="u_user" EntitySet="u_user" />
+      <End Role="u_registration" EntitySet="u_registration" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
