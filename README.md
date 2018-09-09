@@ -30,14 +30,13 @@ No installation required
 
 * Download and open with visual studio 2017
 * Debug with any browser, the output will be ~u_portal/Index, which will display list of clients 
+https://github.com/surenv1123/Credible_Dev_test/blob/master/Images/Portal_Info.PNG
 * selecting any client(portal_nm), will display one popup with list of courses for the selected client.
+https://github.com/surenv1123/Credible_Dev_test/blob/master/Images/Course_Info.PNG
 * selecting any Course(cource_portal_nm), will display one popup with list of users registered to the course.
+https://github.com/surenv1123/Credible_Dev_test/blob/master/Images/Reg_User_Info.PNG
 
 
-
-## Built With
-
-* Visual Studio 2017, Web Application with MVC Framework
 
 
 
